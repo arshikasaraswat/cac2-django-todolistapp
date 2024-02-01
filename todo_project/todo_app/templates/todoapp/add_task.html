@@ -1,0 +1,21 @@
+<!-- todo_app/templates/todo_app/add_task.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Add Task</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input type="text" name="title" required>
+        <br>
+        <label for="description">Description:</label>
+        <textarea name="description" required></textarea>
+        <br>
+        <input type="submit" value="Add Task">
+    </form>
+    <a href="{% url 'task_list' %}">Back to Task List</a>
+</body>
+</html>
